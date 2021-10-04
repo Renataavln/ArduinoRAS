@@ -9,19 +9,20 @@ void setup(){
 }
 
 void loop(){
-  int duracaoVermelha = 25000; //duração da luz vermelha no semáforo
+  int duracaoVermelha = 10000; //duração da luz vermelha no semáforo
   int duracaoAmarela = 5000;   //duração da luz amarela no semáforo
-  int duracaoVerde = 10000;    //duração da luz ver no semáforo
+  int duracaoVerde = 25000;    //duração da luz ver no semáforo
   
-  digitalWrite(LUZ_VERMELHA, HIGH);
-  delay(duracaoVermelha);
-  digitalWrite(LUZ_VERMELHA, LOW);
+  digitalWrite(LUZ_VERDE, HIGH);
+  delay(duracaoVerde);
+  digitalWrite(LUZ_VERDE, LOW);
   
   digitalWrite(LUZ_AMARELA, HIGH);
   delay(duracaoAmarela);
   digitalWrite(LUZ_AMARELA, LOW);
   
-  digitalWrite(LUZ_VERDE, HIGH);
-  delay(duracaoVerde);
-  digitalWrite(LUZ_VERDE, LOW);
+  digitalWrite(LUZ_VERMELHA, HIGH);
+  delay(duracaoVermelha);
+  digitalWrite(LUZ_VERMELHA, LOW);
+  
 }

@@ -12,22 +12,22 @@ void setup(){
 
 void loop(){
   int duracaoAmarela = 5000;
-  int duracaoVerde = 10000;
-  int duracaoVermelhaAcionado = 2000;
+  int duracaoVermelha = 10000;
+  int duracaoVerdeAcionado = 2000;
   int estadoDoBotao = digitalRead(BOTAO);
   
   if(estadoDoBotao == HIGH){
-    delay(duracaoVermelhaAcionado);
-    digitalWrite(LUZ_VERMELHA, LOW);
+    delay(duracaoVerdeAcionado);
+    digitalWrite(LUZ_VERDE, LOW);
   
     digitalWrite(LUZ_AMARELA, HIGH);
     delay(duracaoAmarela);
     digitalWrite(LUZ_AMARELA, LOW);
   
-    digitalWrite(LUZ_VERDE, HIGH);
-    delay(duracaoVerde);
-    digitalWrite(LUZ_VERDE, LOW);
-  }else{
     digitalWrite(LUZ_VERMELHA, HIGH);
+    delay(duracaoVermelha);
+    digitalWrite(LUZ_VERMELHA, LOW);
+  }else{
+    digitalWrite(LUZ_VERDE, HIGH);
   }
 }
